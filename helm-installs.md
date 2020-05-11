@@ -3,10 +3,8 @@
 <pre><code>
 helm repo update
 
+helm install metrics-server -f ~/kubernetes/YAML/helm-metrics-server.yaml stable/metrics-server -n metrics
 helm install nfs-provisioner --set nfs.server=192.168.1.10 --set nfs.path=/mnt/nfskubernetes/tkg-cluster-1 stable/nfs-client-provisioner -n nfs-provisioner
-
-
-
 
 helm show values stable/prometheus --version 11.1.5 > ~/kubernetes/YAML/helm-prometheus.yaml
 
