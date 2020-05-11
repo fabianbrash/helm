@@ -338,18 +338,18 @@ notifiers: {}
 ##
 ## `path` must be /var/lib/grafana/dashboards/<provider_name>
 ##
-dashboardProviders: {}
-#  dashboardproviders.yaml:
-#    apiVersion: 1
-#    providers:
-#    - name: 'default'
-#      orgId: 1
-#      folder: ''
-#      type: file
-#      disableDeletion: false
-#      editable: true
-#      options:
-#        path: /var/lib/grafana/dashboards/default
+dashboardProviders: 
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+    - name: 'extra'
+      orgId: 1
+      folder: 'Extra'
+      type: file
+      disableDeletion: true
+      editable: true
+      options:
+        path: /var/lib/grafana/dashboards/extra
 
 ## Configure grafana dashboard to import
 ## NOTE: To use dashboards you must also enable/configure dashboardProviders
@@ -357,7 +357,21 @@ dashboardProviders: {}
 ##
 ## dashboards per provider, use provider name as key.
 ##
-dashboards: {}
+dashboards: 
+  extra:
+    K8-Cluster-Detail-Dashboard:
+      gnetId: 10856
+      datasource: Prometheus-monitoring
+    Cluster-Monitoring-Kubernetes:
+      gnetId: 10000
+      datasource: Prometheus-monitoring
+    kubernetes-Deployment-Statefulset-Daemonset-metrics:
+      gnetId: 8588
+      datasource: Prometheus-monitoring
+    Kubernetes-Cluster:
+      gnetId: 6417
+      datasource: Prometheus-monitoring
+
   # default:
   #   some-dashboard:
   #     json: |
