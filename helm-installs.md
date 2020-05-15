@@ -18,6 +18,8 @@ helm show values stable/grafana --version 5.0.22 > ~/kubernetes/YAML/helm-grafan
 
 helm install grafana -f ~/kubernetes/YAML/helm-grafana.yaml stable/grafana --version 5.0.22 -n monitoring | tee -a ~/helm-grafana.log
 
+helm install nginx-ingress -f ~/kubernetes/YAML/helm-nginx-ingress.yaml stable/nginx-ingress --version 1.36.3 -n nginx-ingress
+
 </pre></code>
 
 # More to come..
