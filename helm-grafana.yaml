@@ -374,6 +374,9 @@ dashboards:
     Kubernetes-App-Metrics:
       gnetId: 11143
       datasource: Prometheus-monitoring
+    Kubernetes-Compute-Resources-Pods:
+      gnetId: 12120
+      datasource: Prometheus-monitoring
 
   # default:
   #   some-dashboard:
