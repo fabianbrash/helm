@@ -4,6 +4,7 @@ role: Agent
 
 ## ASSUMES WE ARE USING DO(DIGITAL OCEAN) TO HOST OUR KAFKA INSTANCE
 ## SECRET EXAMPLE HERE https://github.com/fabianbrash/YAML/blob/master/kafka-secret.yaml
+## https://vector.dev/docs/setup/installation/package-managers/helm/
 containerSecurityContext:
   readOnlyRootFilesystem: false
   runAsUser: 0
