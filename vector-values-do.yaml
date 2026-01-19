@@ -3,6 +3,7 @@ role: Agent
 # 1. PERMISSIONS & OOM FIX
 
 ## ASSUMES WE ARE USING DO(DIGITAL OCEAN) TO HOST OUR KAFKA INSTANCE
+## SECRET EXAMPLE HERE https://github.com/fabianbrash/YAML/blob/master/kafka-secret.yaml
 containerSecurityContext:
   readOnlyRootFilesystem: false
   runAsUser: 0
